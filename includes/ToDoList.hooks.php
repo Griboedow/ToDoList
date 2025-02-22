@@ -23,6 +23,7 @@ class ToDoListHooks {
 		$out = $parser->getOutput();
 		$out->addModules( ['ext.ToDoList'] );
 
+		$isDone = False;
 		if( isset( $args['done'] ) ){
 			$isDone =  filter_var($args['done'], FILTER_VALIDATE_BOOLEAN);
 		}
