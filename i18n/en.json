@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [ "Nikolai Kochkin" ]
+	},
+	"googleknowledgegraph-description": "The extension gets brief description from Google Knowledge Graph",
+	"apihelp-askgoogleknowledgegraph-summary" : "API to get description from Google Knowledge Graph",
+	"apihelp-askgoogleknowledgegraph-param-query": "String to ask from Google Knowledge Graph"
+}

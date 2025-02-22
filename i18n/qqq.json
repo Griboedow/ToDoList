@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [ "Developer Name" ]
+	},
+	"googleknowledgegraph-description": "About this application text.",
+	"apihelp-askgoogleknowledgegraph-summary" : "Help string for 'askgoogleknowledgegraph' API request",
+	"apihelp-askgoogleknowledgegraph-param-query": "Help string for 'query' parameter of API request 'askgoogleknowledgegraph'"
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [ "Николай Кочкин" ]
+	},
+	"googleknowledgegraph-description": "Это расширение получает описание из Google Knowledge Graph",
+	"apihelp-askgoogleknowledgegraph-summary" : "API запрос для получения инфомрации из Google Knowledge Graph",
+	"apihelp-askgoogleknowledgegraph-param-query": "Строка, которую нужно запросить у Google Knowledge Graph"
+}

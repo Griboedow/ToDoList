@@ -1,0 +1,52 @@
+{
+	"name": "ToDoList",
+	"version": "0.1.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Urfiner Urfiner]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:ToDoList",
+	"descriptionmsg": "ToDoList-description",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"MessagesDirs": {
+		"ToDoList": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"ToDoListHooks": "includes/ToDoList.hooks.php",
+		"ApiToDoList": "includes/ApiToDoList.php"
+	},
+	"APIModules": {
+		"askToDoList": "ApiToDoList"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ToDoListHooks::onParserSetup"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ToDoList/modules"
+	},
+	"ResourceModules": {
+		"ext.ToDoList": {	
+			"localBasePath": "modules/ext.ToDoList",
+			"remoteExtPath": "ToDoList/modules/ext.ToDoList",
+			"scripts": [
+				"ext.ToDoList.js"
+			],
+			"styles": [
+				"ext.ToDoList.css"
+			]
+		}
+	},
+	"config": {
+
+	},
+	"ConfigRegistry": {
+		"ToDoList": "GlobalVarConfig::newInstance"
+	},
+	"manifest_version": 2
+}
