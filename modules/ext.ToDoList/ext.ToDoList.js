@@ -30,6 +30,9 @@ var toDoModificationQueue = Promise.resolve();
 			// use cursor style to identify loading is still in progress
 			document.body.style.cursor = "wait";
 
+			//OOUI hack-ish fix
+			element.checked = !element.checked
+
 			toDoModificationQueue = toDoModificationQueue.then(new mw.Api().edit(
 				mw.config.get('wgTitle'),
 				function ( revision ) {
