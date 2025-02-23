@@ -3,8 +3,8 @@ The ToDoList MediaWiki extension provides an ability to add checkboxes to wiki p
 The extension is not currently very stable, so I suggest to refresh your page after modification to be sure all your edits (check and uncheck items) are in place.
 
 # Installation
-1. Download extension to the ```extensions``` folder of your MediaWiki: ```git clone https://github.com/Griboedow/ToDoList.git```
-2. Load the extension in LocalSettings.php ```wfLoadExtension( 'ToDoList' );```
+1. Download extension to the **extensions** folder of your MediaWiki: ```git clone https://github.com/Griboedow/ToDoList.git```
+2. Load the extension in **LocalSettings.php** ```wfLoadExtension( 'ToDoList' );```
 
 # Usage 
 To insert a checkbox, you can either insert "<todo/>" tag or go to Visual Editor, Insert->Checkbox:
