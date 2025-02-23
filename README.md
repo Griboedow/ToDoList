@@ -1,5 +1,7 @@
 The ToDoList MediaWiki extension provides an ability to add checkboxes to wiki pages. The checkboxes states are stored in wikitext, and they can be checked or unchecked in "read" mode.
 
+MediaWiki page: https://www.mediawiki.org/wiki/Extension:ToDoList
+
 The extension is not currently very stable, so I suggest to refresh your page after modification to be sure all your edits (check and uncheck items) are in place.
 
 # Installation
