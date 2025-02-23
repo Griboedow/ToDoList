@@ -17,11 +17,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"ToDoListHooks": "includes/ToDoList.hooks.php",
-		"ApiToDoList": "includes/ApiToDoList.php"
-	},
-	"APIModules": {
-		"askToDoList": "ApiToDoList"
+		"ToDoListHooks": "includes/ToDoList.hooks.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "ToDoListHooks::onParserSetup"
@@ -36,9 +32,20 @@
 			"remoteExtPath": "ToDoList/modules/ext.ToDoList",
 			"scripts": [
 				"ext.ToDoList.js"
+			]
+		},
+		"ext.ToDoList.VE": {	
+			"localBasePath": "modules/ext.ToDoList.VE",
+			"remoteExtPath": "ToDoList/modules/ext.ToDoList.VE",
+			"scripts": [
+				"ve.ui.ToDoListTool.js"
 			],
-			"styles": [
-				"ext.ToDoList.css"
+			"dependencies": [
+                "ext.visualEditor.mwcore",
+                "ext.visualEditor.mwtransclusion"
+            ],
+			"messages": [
+				"ve-todolist-toolbar-button"
 			]
 		}
 	},
@@ -48,5 +55,10 @@
 	"ConfigRegistry": {
 		"ToDoList": "GlobalVarConfig::newInstance"
 	},
+	"attributes": {
+        "VisualEditor": {
+            "PluginModules": ["ext.ToDoList.VE"]
+        }
+    },
 	"manifest_version": 2
 }

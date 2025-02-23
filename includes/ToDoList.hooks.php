@@ -21,6 +21,8 @@ class ToDoListHooks {
 	 */
 	public static function processToDoListTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$out = $parser->getOutput();
+		OutputPage::setupOOUI();
+		$out->setEnableOOUI( true );
 		$out->addModules( ['ext.ToDoList'] );
 
 		$isDone = False;
@@ -28,7 +30,13 @@ class ToDoListHooks {
 			$isDone =  filter_var($args['done'], FILTER_VALIDATE_BOOLEAN);
 		}
 
-		return '<input type="checkbox" class="todo-checkbox"' . ( $isDone ? ' checked' : '' ) . '>';
+		//return '<input type="checkbox" class="todo-checkbox oo-ui-inputWidget-input"' . ( $isDone ? ' checked' : '' ) . '>';
+
+		$checkboxControl = new OOUI\CheckboxInputWidget( [
+			'selected' => $isDone,
+			'classes' => [ 'todo-checkbox' ]
+		] );
+		return [ $checkboxControl->toString(), 'markerType' => 'nowiki' ];
 	}
 
 }
