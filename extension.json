@@ -27,38 +27,38 @@
 		"remoteExtPath": "ToDoList/modules"
 	},
 	"ResourceModules": {
-		"ext.ToDoList": {	
+		"ext.ToDoList": {
 			"localBasePath": "modules/ext.ToDoList",
 			"remoteExtPath": "ToDoList/modules/ext.ToDoList",
 			"scripts": [
 				"ext.ToDoList.js"
 			]
 		},
-		"ext.ToDoList.VE": {	
+		"ext.ToDoList.VE": {
 			"localBasePath": "modules/ext.ToDoList.VE",
 			"remoteExtPath": "ToDoList/modules/ext.ToDoList.VE",
 			"scripts": [
 				"ve.ui.ToDoListTool.js"
 			],
 			"dependencies": [
-                "ext.visualEditor.mwcore",
-                "ext.visualEditor.mwtransclusion"
-            ],
+				"ext.visualEditor.mwcore",
+				"ext.visualEditor.mwtransclusion"
+			],
 			"messages": [
 				"ve-todolist-toolbar-button"
 			]
 		}
 	},
-	"config": {
-
-	},
+	"config": {},
 	"ConfigRegistry": {
 		"ToDoList": "GlobalVarConfig::newInstance"
 	},
 	"attributes": {
-        "VisualEditor": {
-            "PluginModules": ["ext.ToDoList.VE"]
-        }
-    },
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.ToDoList.VE"
+			]
+		}
+	},
 	"manifest_version": 2
 }
