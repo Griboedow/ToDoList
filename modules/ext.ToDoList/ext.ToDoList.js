@@ -34,7 +34,7 @@ var toDoModificationQueue = Promise.resolve();
 				mw.config.get('wgTitle'),
 				function ( revision ) {
 					return {
-						text: changeNthCheckboxState(revision.content, element.todoIndex, !element.checked),
+						text: changeNthCheckboxState(revision.content, element.todoIndex, element.checked),
 						summary: 'Checkbox click (set checkbox #' + element.todoIndex + ' to ' + (element.checked ? 'checked' : 'unchecked') + ')',
 						minor: true
 					};
