@@ -30,15 +30,14 @@ var toDoModificationQueue = Promise.resolve();
 			// use cursor style to identify loading is still in progress
 			document.body.style.cursor = "wait";
 
-			//OOUI hack-ish fix
-			element.checked = !element.checked
-
 			toDoModificationQueue = toDoModificationQueue.then(new mw.Api().edit(
 				mw.config.get('wgTitle'),
 				function ( revision ) {
+					var checkedState = element.getElementsByTagName('input')[0].checked ? true : false;
+					var todoIndex = element.todoIndex;
 					return {
-						text: changeNthCheckboxState(revision.content, element.todoIndex, element.checked),
-						summary: 'Checkbox click (set checkbox #' + element.todoIndex + ' to ' + (element.checked ? 'checked' : 'unchecked') + ')',
+						text: changeNthCheckboxState(revision.content, todoIndex, checkedState),
+						summary: 'Checkbox click (set checkbox #' + todoIndex + ' to ' + (checkedState ? 'checked' : 'unchecked') + ')',
 						minor: true
 					};
 				}
