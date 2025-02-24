@@ -9,7 +9,7 @@ The extension is not currently very stable, so I suggest to refresh your page af
 2. Load the extension in **LocalSettings.php** ```wfLoadExtension( 'ToDoList' );```
 
 # Usage 
-To insert a checkbox, you can either insert "<todo/>" tag or go to Visual Editor, Insert->Checkbox:
+To insert a checkbox, you can either insert ```<todo/>``` tag or go to Visual Editor, Insert->Checkbox:
 
 ![ToDoListADdCheckbox](https://github.com/user-attachments/assets/1d3e7a79-10d8-42c1-a723-aa2f656d5741)
 
