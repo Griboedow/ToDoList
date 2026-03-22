@@ -31,7 +31,7 @@ var toDoModificationQueue = Promise.resolve();
 			document.body.style.cursor = "wait";
 
 			toDoModificationQueue = toDoModificationQueue.then(new mw.Api().edit(
-				mw.config.get('wgTitle'),
+				mw.config.get('wgPageName'),
 				function (revision) {
 					var checkedState = element.getElementsByTagName('input')[0].checked ? true : false;
 					var todoIndex = element.todoIndex;
