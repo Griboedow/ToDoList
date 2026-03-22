@@ -21,4 +21,6 @@ It will create a page edit event, you can later see it in history:
 
 ![image](https://github.com/user-attachments/assets/158baf4f-ef73-4948-a9b0-c6dcb301c5d4)
 
-
+# Notes
+* Transclusion is not supported. Checkboxes from transclusion will not be correctly checked-unchecked.
+* If page is modified by another user, then checkbox click would cause a page refresh (with a wanring note about that)
